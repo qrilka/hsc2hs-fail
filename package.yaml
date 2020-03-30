@@ -1,0 +1,32 @@
+name:                hsc2hs-fail
+version:             0.1.0.0
+github:              "qrilka/hsc2hs-fail"
+license:             BSD3
+author:              "Kirill Zaborsky"
+maintainer:          "qrilka@gmail.com"
+copyright:           "2020 Kirill Zaborsky"
+
+extra-source-files:
+- README.md
+description:         Please see the README on GitHub at <https://github.com/githubuser/hsc2hs#readme>
+
+# Uncomment to get Cabal failing because of incorrect version
+#build-tools:
+#- hsc2hs >= 0.68.6
+dependencies:
+- base >= 4.7 && < 5
+- template-haskell
+
+library:
+  source-dirs: src
+
+executables:
+  hsc2hs-fail-exe:
+    main:                Main.hs
+    source-dirs:         app
+    ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies:
+    - hsc2hs-fail
