@@ -35,11 +35,11 @@ and with the lines
 ```
 
 commented  out we get a build failure because the version 0.68.5 from GHC-8.6.5
-gets used. Uncommeting the constraint above gives a unsatisfied version failure
+gets used. Uncommenting the constraint above gives a unsatisfied version failure
 from Cabal.
 
 One could build `hsc2hs` manually with `stack build hsc2hs` and that adds the
-verion 0.68.6 in to the Stack's path:
+version 0.68.6 into the Stack's path:
 
 ```
 $ stack exec -- hsc2hs --version
